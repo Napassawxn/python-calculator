@@ -7,22 +7,22 @@ class Calculator:
 
     def multiply(self, a, b):
         result = 0
-        for i in range(b+1):
+        for i in range(b):
             result = self.add(result, a)
         return result
 
     def divide(self, a, b):
         result = 0
-        while a > b:
-            a = self.subtract(a, b)
+        while a >= b:
+            a = self.subtract(b, a)
             result += 1
         return result
-    
+
     def modulo(self, a, b):
-        while a <= b:
+        while a >= b:
             a = a-b
         return a
-
+    
 # Example usage:
 if __name__ == "__main__":
     calc = Calculator()
